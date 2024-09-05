@@ -13,7 +13,7 @@ export class UserService {
     // ตรวจสอบว่ามี username ซ้ำหรือไม่
     const existingUser = await this.userModel.findOne({ username: createUserDto.username });
     if (existingUser) {
-      throw new ConflictException('Username นี้มีอยู่ในระบบแล้วไอเวร !! นะไอสัส  55555');
+      throw new ConflictException('Username นี้มีอยู่ในระบบแล้วไอเวร !! นะไอสัส');
     }
 
     // ถ้าไม่มี username ซ้ำ ให้สร้างผู้ใช้ใหม่
