@@ -4,7 +4,6 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { UserMission } from './schemas/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { promises } from 'dns';
 
 @Injectable()
 export class UserService {
@@ -14,7 +13,7 @@ export class UserService {
     // ตรวจสอบว่ามี username ซ้ำหรือไม่
     const existingUser = await this.userModel.findOne({ username: createUserDto.username });
     if (existingUser) {
-      throw new ConflictException('Username นี้มีอยู่ในระบบแล้วไอเวร !! นะไอสัส');
+      throw new ConflictException('Username นี้มีอยู่ในระบบแล้วไอเวร !! นะไอสัส  55555');
     }
 
     // ถ้าไม่มี username ซ้ำ ให้สร้างผู้ใช้ใหม่
